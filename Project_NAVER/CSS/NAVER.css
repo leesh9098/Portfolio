@@ -1,0 +1,308 @@
+@charset "UTF-8";
+
+#wrap {
+    position: relative;
+    text-align: center;
+    padding-top: 50px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.service_area {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: fit-content;
+    height: fit-content;
+}
+
+.service_area a {
+    font-size: 12px;
+}
+
+.service_area a:first-child span {
+    padding-right: 8px;
+    border-right: 2px solid #ddd;
+}
+
+.service_area a:nth-child(2), .service_area a:last-child {
+    color: #aaa;
+    font-weight: bold;
+    padding-left: 8px;
+}
+
+.logo_area {
+    max-width: 1190px;
+    height: 55px;
+    margin: 0 auto 50px;
+}
+
+.logo {
+    float: left;
+    width: 200px;
+    height: 100%;
+    background: url(/NAVER_files/logo.png) center center no-repeat;
+    background-size: cover;
+}
+
+.searchbox {
+    float: left;
+    margin-left: 30px;
+}
+
+.searchbox input {
+    float: left;
+    width: 530px;
+    height: 50px;
+    padding: 0;
+    border: 2px solid #00bb00;
+}
+
+.searchbox button {
+    float: left;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    box-sizing: content-box;
+    margin-left: -1px;
+}
+
+.searchbox button::after {
+    position: absolute;
+    display: block;
+    content: "";
+    top: -2px;
+    right: -2px;
+    width: 54px;
+    height: 54px;
+    background: url(/NAVER_files/searchbutton.PNG) center center no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+/* 네비게이션 바 */
+.nav_box {
+    clear: both;
+    width: 100%;
+    height: 50px;
+    border-top: 2px solid #ddd;
+    border-bottom: 2px solid #ddd;
+}
+
+.nav_wrap {
+    max-width: 1190px;
+    margin: 0 auto;
+}
+
+.nav_wrap a:first-child nav {
+    margin: 0 5px 0 0;
+}
+
+nav {
+    float: left;
+    width: fit-content;
+    line-height: 50px;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+.greentext {
+    color: #00bb00;
+}
+
+.weather_nav {
+    float: right;
+    width: 240px;
+    height: 40px;
+    padding: 5px 0;
+    margin: 0;
+}
+
+/* 콘텐츠 영역 */
+#content_wrap {
+    max-width: 1190px;
+    padding-top: 20px;
+    margin: 0 auto;
+}
+
+section {
+    float: left;
+}
+
+aside {
+    float: left;
+}
+
+.ad_main {
+    width: 750px;
+    margin-bottom: 10px;
+}
+
+.ad_main img {
+    width: 100%;
+    height: 100%;
+}
+
+.issue_box {
+    width: 748px;
+    height: 16px;
+    border: 1px solid #aaa;
+    background: #bbddff11;
+    padding: 17px 0;
+    text-align: left;
+}
+
+.issue_box span {
+    font-size: 14px;    
+}
+
+.issue_area {
+    float: left;
+}
+
+.issue_area a:first-child span {
+    font-weight: bold;
+    margin-left: 15px;
+}
+
+.direct_area {
+    float: right;
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+.direct_area a span {
+    margin-right: 3px;
+}
+
+.bluetext {
+    position: relative;
+    color: #0044ff;
+    margin-right: 12px !important;
+}
+
+.bluetext::after {
+    position: absolute;
+    display: inline-block;
+    content: "";
+    top: 8px;
+    right: -12px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+}
+
+.newsstand_box {
+    width: 750px;
+    height: 15px;
+    padding: 17.5px 0;
+}
+
+.newsstand {
+    float: left;
+}
+
+.newsstand li {
+    display: inline-block;
+    font-size: 15px;
+}
+
+.newsstand li span {
+    font-size: 16px;
+    font-weight: 900;
+    color: #777;
+}
+
+.newsstand li:nth-child(3) {
+    margin-left: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.subscribe_news {
+    position: relative;
+    font-size: 14px;
+    color: #777;
+    cursor: pointer;
+}
+
+.subscribe_news::after {
+    position: absolute;
+    top: 7px;
+    right: -10px;
+    display: block;
+    content: "";
+    border: 2px solid #ccc;
+    border-radius: 50%;
+}
+
+.liststyle {
+    float: right;
+}
+
+.liststyle li {
+    display: inline-block;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.liststyle li:nth-child(2) {
+    color: #0000ff;
+}
+
+.allcompany {
+    position: relative;
+    width: 748px;
+    height: 283px;
+    border: 1px solid #ccc;
+}
+
+.allcompany>a>div {
+    float: left;
+    width: 123.6px;
+    height: 20px;
+    padding: 25px 0;
+    text-align: center;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.leftbtn, .rightbtn {
+    position: absolute;
+    top: 120px;
+    width: 40px !important;
+    height: 40px !important;
+    line-height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0 !important;
+    color: #888;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.leftbtn {
+    left: -26px;
+}
+
+.rightbtn {
+    right: -26px;
+}
+
+.newscompany6, .newscompany12, .newscompany18, .newscompany24 {
+    border-right: 0 !important;
+}
+
+.allcompany>a>div>img {
+    width: 51.5px;
+    height: 20px;
+}
