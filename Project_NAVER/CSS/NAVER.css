@@ -351,10 +351,3 @@ aside {
     padding: 0;
     border: none;
 }
-/* 
-.todaypost span::after {
-    position: absolute;
-    content: "";
-    display: block;
-    border: 1px solid #444;
-} */
