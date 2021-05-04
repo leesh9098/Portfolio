@@ -306,3 +306,55 @@ aside {
     width: 51.5px;
     height: 20px;
 }
+
+.todaypost {
+    width: 750px;
+    height: 16px;
+    padding: 17px 0;
+    margin-top: 20px;
+}
+
+.todaypost span:first-child {
+    float: left;
+}
+
+.todaypost span:nth-child(2) {
+    float: left;
+    font-size: 14px;
+    color: #aaa;
+    margin-left: 10px;
+}
+
+.todaypost span:nth-child(3) {
+    float: right;
+    font-size: 14px;
+}
+
+.todaypost>a>span {
+    float: right;
+    font-size: 14px;
+    color: #444;
+}
+
+.todaypost span:last-child {
+    position: relative;
+    float: right;
+    margin-left: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    padding-right: 5px;
+    border-right: 2px solid #aaa;
+}
+
+.todaypost span:last-child span {
+    color: #aaa;
+    padding: 0;
+    border: none;
+}
+/* 
+.todaypost span::after {
+    position: absolute;
+    content: "";
+    display: block;
+    border: 1px solid #444;
+} */
