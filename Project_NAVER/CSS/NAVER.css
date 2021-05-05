@@ -262,7 +262,7 @@ aside {
 }
 
 .liststyle li:nth-child(2) {
-    color: #0000ff;
+    color: #0044ff;
 }
 
 .allcompany {
@@ -356,6 +356,7 @@ aside {
 .right_area span:nth-child(2) {
     position: relative;
     float: right;
+    height: 16px;
     margin-left: 5px;
     font-size: 14px;
     font-weight: bold;
@@ -426,13 +427,13 @@ aside {
     text-align: left;
 }
 
-.post_health1 {
+.post_health {
     width: 790px;
     height: 114px;
     padding: 20px 0;
 }
 
-.post_health1 img {
+.post_health img {
     float: left;
     width: 170px;
     height: 100%;
@@ -462,11 +463,11 @@ aside {
     font-size: 12px;
 }
 
-.seoulnews {
+.articlename {
     position: relative;
 }
 
-.seoulnews::after {
+.articlename::after {
     position: absolute;
     content: "";
     display: block;
