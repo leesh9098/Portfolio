@@ -115,6 +115,13 @@ nav {
     margin: 0 10px;
 }
 
+.nav_wrap a:nth-child(17) nav {
+    color: #555;
+    font-size: 14px;
+    font-weight: normal;
+    margin-left: 15px;
+}
+
 .greentext {
     color: #00bb00;
 }
@@ -275,7 +282,7 @@ aside {
     border-bottom: 1px solid #ccc;
 }
 
-.leftbtn, .rightbtn {
+.leftbtn_big, .rightbtn_big {
     position: absolute;
     top: 120px;
     width: 40px !important;
@@ -288,14 +295,15 @@ aside {
     border: 1px solid #ccc;
     border-radius: 50%;
     background: #fff;
+    box-shadow: 1px 3px 3px #ccc;
 }
 
-.leftbtn {
+.leftbtn_big {
     left: -26px;
 }
 
-.rightbtn {
-    right: -26px;
+.rightbtn_big {
+    right: -17px;
 }
 
 .newscompany6, .newscompany12, .newscompany18, .newscompany24 {
