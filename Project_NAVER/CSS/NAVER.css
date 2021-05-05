@@ -451,8 +451,11 @@ aside {
 }
 
 .explanation p:first-child {
-    color: #00aa00;
     font-weight: bold;
+}
+
+.explanation p:nth-child(2):hover {
+    text-decoration: underline;
 }
 
 .explanation p:nth-child(3) {
