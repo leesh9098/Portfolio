@@ -314,29 +314,38 @@ aside {
     margin-top: 20px;
 }
 
-.todaypost span:first-child {
+.left_area {
+    float: left;
+    width: fit-content;
+    height: fit-content;
+}
+
+.right_area {
+    float: right;
+    width: fit-content;
+    height: fit-content;
+}
+
+.left_area span:first-child {
     float: left;
 }
 
-.todaypost span:nth-child(2) {
+.left_area span:nth-child(2) {
     float: left;
     font-size: 14px;
-    color: #aaa;
+    color: #555;
     margin-left: 10px;
 }
 
-.todaypost span:nth-child(3) {
+.right_area>a>span {
     float: right;
     font-size: 14px;
-}
-
-.todaypost>a>span {
-    float: right;
-    font-size: 14px;
+    font-weight: bold;
     color: #444;
+    margin-left: 5px;
 }
 
-.todaypost span:last-child {
+.right_area span:nth-child(2) {
     position: relative;
     float: right;
     margin-left: 5px;
@@ -346,8 +355,120 @@ aside {
     border-right: 2px solid #aaa;
 }
 
-.todaypost span:last-child span {
-    color: #aaa;
-    padding: 0;
+.right_area span:nth-child(2) span {
+    margin-left: 5px;
+    color: #777;
+    font-weight: normal;
+}
+
+.subject {
+    position: relative;
+    width: 820px;
+    height: 50px;
+}
+
+.subject>div {
+    float: left;
+    width: 101.375px;
+    height: 16px;
+    color: #222;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 16px 0;
+    border: 1px solid #bbb;
+    border-right: none;
+}
+
+.subject>div:nth-child(8) {
+    color: #fff;
+    background: #00aa00;
+    padding: 17px 0;
     border: none;
+}
+
+.subject>div:last-child {
+    border-right: 1px solid #bbb;
+}
+
+.leftbtn_small, .rightbtn_small {
+    position: absolute;
+    top: 9px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    color: #888;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 1px 3px 3px #ccc;
+}
+
+.leftbtn_small {
+    left: -17px;
+}
+
+.rightbtn_small {
+    right: -17px;
+}
+
+.post {
+    width: 820px;
+    height: fit-content;
+    text-align: left;
+}
+
+.post_health1 {
+    width: 790px;
+    height: 114px;
+    padding: 20px 0;
+}
+
+.post_health1 img {
+    float: left;
+    width: 170px;
+    height: 100%;
+}
+
+.explanation {
+    float: left;
+    width: 570px;
+    margin-left: 25px;
+}
+
+.explanation p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.explanation p:first-child {
+    color: #00aa00;
+    font-weight: bold;
+}
+
+.explanation p:nth-child(3) {
+    line-height: 20px;
+}
+
+.explanation span {
+    font-size: 12px;
+}
+
+.seoulnews {
+    position: relative;
+}
+
+.seoulnews::after {
+    position: absolute;
+    content: "";
+    display: block;
+    top: 8px;
+    right: -7px;
+    border: 1px solid #444;
+    border-radius: 50%;
+}
+
+.explanation span:last-child {
+    color: #444;
+    margin-left: 8px;
 }
