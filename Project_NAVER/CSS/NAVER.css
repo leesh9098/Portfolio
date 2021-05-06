@@ -430,7 +430,7 @@ aside {
 .post_health {
     width: 790px;
     height: 114px;
-    padding: 20px 0;
+    padding-top: 20px;
 }
 
 .post_health img {
@@ -454,7 +454,7 @@ aside {
     font-weight: bold;
 }
 
-.explanation p:nth-child(2):hover {
+.explanation:hover p:nth-child(2) {
     text-decoration: underline;
 }
 
@@ -462,12 +462,10 @@ aside {
     line-height: 20px;
 }
 
-.explanation span {
-    font-size: 12px;
-}
-
 .articlename {
     position: relative;
+    color: #444;
+    font-size: 12px;
 }
 
 .articlename::after {
@@ -480,7 +478,64 @@ aside {
     border-radius: 50%;
 }
 
-.explanation span:last-child {
-    color: #444;
+.postdate {
+    color: #777;
     margin-left: 8px;
+    font-size: 12px;
+}
+
+.post_health_ho {
+    width: 820px;
+    height: 202px;
+    padding: 20px 0;
+    border-top: 2px solid #eee;
+    border-bottom: 2px solid #eee;
+    margin-top: 20px;
+}
+
+.health_videolist li {
+    float: left;
+}
+
+.health_videolist li+li {
+    margin-left: 20px;
+}
+
+.thumbnail_wrap {
+    position: relative;
+    width: 260px;
+    height: 130px;
+}
+
+.thumbnail_wrap img:first-child {
+    width: 100%;
+    height: 100%;
+}
+
+.thumbnail_wrap img:nth-child(2) {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 50px;
+    height: 50px;
+}
+
+.thumbnail_wrap span {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 35px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 11px;
+    text-align: center;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.health_videolist li p {
+    width: 260px;
+    line-height: 20px;
+    font-size: 14px;
+    padding: 8px 0;
 }
