@@ -433,6 +433,10 @@ aside {
     padding-top: 20px;
 }
 
+.post_health:last-child {
+    padding-bottom: 20px;
+}
+
 .post_health img {
     float: left;
     width: 170px;
