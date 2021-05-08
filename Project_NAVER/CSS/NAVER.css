@@ -505,6 +505,10 @@ aside {
     margin-left: 20px;
 }
 
+.health_videolist li:hover p {
+    text-decoration: underline;
+}
+
 .thumbnail_wrap {
     position: relative;
     width: 260px;
