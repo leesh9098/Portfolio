@@ -159,6 +159,7 @@ aside {
     height: 100%;
 }
 
+/* 뉴스 */
 .issue_box {
     width: 748px;
     height: 16px;
@@ -315,6 +316,7 @@ aside {
     height: 20px;
 }
 
+/* 오늘 읽을만한 글 */
 .todaypost {
     width: 750px;
     height: 16px;
@@ -488,13 +490,17 @@ aside {
     font-size: 12px;
 }
 
-.post_health_ho {
+.post_health_ho1, .post_health_ho2 {
     width: 820px;
     height: 202px;
     padding: 20px 0;
     border-top: 2px solid #eee;
     border-bottom: 2px solid #eee;
     margin-top: 20px;
+}
+
+.post_health_ho2 {
+    border-bottom: 0;
 }
 
 .health_videolist li {
@@ -546,4 +552,39 @@ aside {
     line-height: 20px;
     font-size: 14px;
     padding: 8px 0;
+}
+
+.morebtn_area {
+    position: relative;
+    width: 820px;
+    padding-top: 20px;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+}
+
+.morebtn_wrap {
+    position: absolute;
+    top: 5px;
+    left: 355px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.morebtn {
+    width: 30px;
+    height: 30px;
+    line-height: 25px;
+    font-weight: bold;
+    color: #888;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 1px 3px 3px #ccc;
+}
+
+.morebtn_wrap span {
+    display: inline-block;
+    margin-top: 10px;
+    color: #555;
 }
