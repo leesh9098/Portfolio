@@ -161,7 +161,7 @@ section {
 .issue_box {
     width: 748px;
     height: 16px;
-    border: 1px solid #aaa;
+    border: 1px solid #ddd;
     background: #bbddff11;
     padding: 17px 0;
     text-align: left;
@@ -268,7 +268,7 @@ section {
     position: relative;
     width: 748px;
     height: 283px;
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
 }
 
 .allcompany>a>div {
@@ -277,8 +277,8 @@ section {
     height: 20px;
     padding: 25px 0;
     text-align: center;
-    border-right: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
 }
 
 .leftbtn_big, .rightbtn_big {
@@ -291,7 +291,7 @@ section {
     font-weight: bold;
     padding: 0 !important;
     color: #888;
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
     border-radius: 50%;
     background: #fff;
     box-shadow: 1px 3px 3px #ccc;
@@ -361,7 +361,7 @@ section {
     font-size: 14px;
     font-weight: bold;
     padding-right: 5px;
-    border-right: 2px solid #aaa;
+    border-right: 2px solid #ddd;
 }
 
 .right_area span:nth-child(2) span {
@@ -384,7 +384,7 @@ section {
     font-size: 14px;
     font-weight: bold;
     padding: 16px 0;
-    border: 1px solid #bbb;
+    border: 1px solid #ddd;
     border-right: none;
 }
 
@@ -396,7 +396,7 @@ section {
 }
 
 .subject>div:last-child {
-    border-right: 1px solid #bbb;
+    border-right: 1px solid #ddd;
 }
 
 .leftbtn_small, .rightbtn_small {
@@ -407,7 +407,7 @@ section {
     line-height: 30px;
     font-weight: bold;
     color: #888;
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
     border-radius: 50%;
     background: #fff;
     box-shadow: 1px 3px 3px #ccc;
@@ -577,7 +577,7 @@ section {
     font-weight: bold;
     color: #888;
     margin: 0 auto;
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
     border-radius: 50%;
     background: #fff;
     box-shadow: 1px 3px 3px #ccc;
@@ -601,6 +601,7 @@ aside {
     background-color: #bbddff11;
     padding: 17px 20px;
     border: 1px solid #ddd;
+    margin-bottom: 15px;
 }
 
 .loginbox p {
