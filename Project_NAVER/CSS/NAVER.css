@@ -664,22 +664,59 @@ aside {
 
 .stockbox {
     width: 304px;
-    height: 16px;
-    padding: 17px;
+    height: 25px;
+    line-height: 25px;
+    padding: 12.5px 15px;
     border: 1px solid #ddd;
+    text-align: left;
+    font-size: 13px;
+}
+
+.live {
+    padding: 3px 7px;
+    border: 1px solid #f00;
+    border-radius: 40%;
+    color: #f00;
+}
+
+.stockbox_text {
+    margin-left: 5px;
+}
+
+.stockbox_text:hover {
+    text-decoration: underline;
 }
 
 .stockbtn_wrap {
     float: right;
     width: 50px;
+    height: 25px;
 }
 
 .stock_left {
     float: left;
     width: 23px;
     height: 23px;
+    line-height: 20px;
+    border: 1px solid #ddd;
+    color: #aaa;
+    font-weight: bold;
+    text-align: center;
 }
 
 .stock_right {
     float: left;
+    width: 23px;
+    height: 23px;
+    line-height: 20px;
+    border: 1px solid #ddd;
+    margin-left: -1px;
+    color: #aaa;
+    font-weight: bold;
+    text-align: center;
+}
+
+.stock_left:hover, .stock_right:hover {
+    background: #ddd;
+    color: #000;
 }
