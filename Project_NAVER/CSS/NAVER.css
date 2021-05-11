@@ -668,6 +668,7 @@ aside {
     line-height: 25px;
     padding: 12.5px 15px;
     border: 1px solid #ddd;
+    margin-bottom: 15px;
     text-align: left;
     font-size: 13px;
 }
@@ -719,4 +720,46 @@ aside {
 .stock_left:hover, .stock_right:hover {
     background: #ddd;
     color: #000;
+}
+
+.ad_side {
+    width: 338px;
+    height: 205px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+}
+
+.ad_side img {
+    width: 100%;
+    height: 100%;
+}
+
+.shoppingmall_wrap {
+    width: 340px;
+    height: 16px;
+    padding: 15px 0;
+    text-align: left;
+}
+
+.shoppingmall_wrap a span:nth-child(2) {
+    color: #777;
+}
+
+.shoppingbtn_wrap {
+    float: right;
+}
+
+.shoppingbtn_wrap span {
+    float: left;
+    margin: 0 8px;
+    cursor: pointer;
+}
+
+.shoppingbtn_wrap span:first-child {
+    color: #00cc66;
+    border-bottom: 2px solid #00cc66;
+}
+
+.shoppingbtn_wrap span:last-child {
+    margin-right: 0;
 }
