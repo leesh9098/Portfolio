@@ -22,3 +22,30 @@ function allbtn() {
     document.getElementById('all').style.fontWeight = "bold"
     document.getElementById('all').style.color = "#000000";
 }
+
+function product() {
+    document.getElementById('product').style.color = "#00cc66"
+    document.getElementById('product').style.borderBottom = "2px solid #00cc66"
+    document.getElementById('shop').style.color = "#000000"
+    document.getElementById('shop').style.borderBottom = "none"
+    document.getElementById('gender').style.color = "#000000"
+    document.getElementById('gender').style.borderBottom = "none"
+}
+
+function shop() {
+    document.getElementById('product').style.color = "#000000"
+    document.getElementById('product').style.borderBottom = "none"
+    document.getElementById('shop').style.color = "#00cc66"
+    document.getElementById('shop').style.borderBottom = "2px solid #00cc66"
+    document.getElementById('gender').style.color = "#000000"
+    document.getElementById('gender').style.borderBottom = "none"
+}
+
+function gender() {
+    document.getElementById('product').style.color = "#000000"
+    document.getElementById('product').style.borderBottom = "#none"
+    document.getElementById('shop').style.color = "#000000"
+    document.getElementById('shop').style.borderBottom = "none"
+    document.getElementById('gender').style.color = "#00cc66"
+    document.getElementById('gender').style.borderBottom = "2px solid #00cc66"
+}
