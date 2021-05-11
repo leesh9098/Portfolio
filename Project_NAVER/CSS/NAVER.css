@@ -661,3 +661,25 @@ aside {
 .find_area a:nth-child(3) span {
     float: right;
 }
+
+.stockbox {
+    width: 304px;
+    height: 16px;
+    padding: 17px;
+    border: 1px solid #ddd;
+}
+
+.stockbtn_wrap {
+    float: right;
+    width: 50px;
+}
+
+.stock_left {
+    float: left;
+    width: 23px;
+    height: 23px;
+}
+
+.stock_right {
+    float: left;
+}
