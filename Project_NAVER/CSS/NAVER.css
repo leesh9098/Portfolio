@@ -33,7 +33,8 @@ a {
     border-right: 2px solid #ddd;
 }
 
-.service_area a:nth-child(2), .service_area a:last-child {
+.service_area a:nth-child(2),
+.service_area a:last-child {
     color: #aaa;
     font-weight: bold;
     padding-left: 8px;
@@ -281,7 +282,8 @@ section {
     border-bottom: 1px solid #ddd;
 }
 
-.leftbtn_big, .rightbtn_big {
+.leftbtn_big,
+.rightbtn_big {
     position: absolute;
     top: 120px;
     width: 40px !important;
@@ -305,7 +307,8 @@ section {
     right: -17px;
 }
 
-.newscompany6, .newscompany12, .newscompany18, .newscompany24 {
+.newscompany6, .newscompany12,
+.newscompany18, .newscompany24 {
     border-right: 0 !important;
 }
 
@@ -399,7 +402,8 @@ section {
     border-right: 1px solid #ddd;
 }
 
-.leftbtn_small, .rightbtn_small {
+.leftbtn_small,
+.rightbtn_small {
     position: absolute;
     top: 9px;
     width: 30px;
@@ -488,7 +492,8 @@ section {
     font-size: 12px;
 }
 
-.post_health_ho1, .post_health_ho2 {
+.post_health_ho1,
+.post_health_ho2 {
     width: 820px;
     height: 202px;
     padding: 20px 0;
@@ -717,7 +722,8 @@ aside {
     text-align: center;
 }
 
-.stock_left:hover, .stock_right:hover {
+.stock_left:hover,
+.stock_right:hover {
     background: #ddd;
     color: #000;
 }
@@ -764,4 +770,58 @@ aside {
 
 .shoppingbtn_wrap span:last-child {
     margin-right: 0;
+}
+
+.shoppingsite_wrap {
+    width: 298px;
+    height: 38px;
+    padding: 15px 20px;
+    border: 1px solid #ddd;
+    background-color: rgba(0, 0, 255, 0.02);
+    font-size: 12px;
+}
+
+.shoppingsite_list1,
+.shoppingsite_list2 {
+    width: 298px;
+    height: 17px;
+}
+
+.shoppingsite_list1 {
+    margin-bottom: 7px;
+}
+
+.shoppingsite_list1 a {
+    float: left;
+    margin-right: 4px;
+}
+
+.shoppingsite_list2 a {
+    position: relative;
+    float: left;
+}
+
+.shoppingsite_list1 a:hover,
+.shoppingsite_list2 a:hover {
+    text-decoration: underline;
+}
+
+.dot {
+    float: left;
+    width: 2px;
+    height: 2px;
+    background-color: #ccc;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    margin: 5px 5px;
+}
+
+.shoppingsite_list1 a:last-child,
+.shoppingsite_list2 a:last-child {
+    margin-right: 0;
+}
+
+.shoppingsite_list1 a:last-child::after,
+.shoppingsite_list2 a:last-child::after {
+    display: none;
 }
