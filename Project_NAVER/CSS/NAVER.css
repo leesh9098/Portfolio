@@ -739,6 +739,7 @@ aside {
     height: 16px;
     padding: 15px 0;
     text-align: left;
+    font-size: 14px;
 }
 
 .shoppingmall_wrap a span:nth-child(2) {
