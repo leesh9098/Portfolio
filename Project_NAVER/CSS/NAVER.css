@@ -307,8 +307,10 @@ section {
     right: -17px;
 }
 
-.newscompany6, .newscompany12,
-.newscompany18, .newscompany24 {
+.newscompany6,
+.newscompany12,
+.newscompany18,
+.newscompany24 {
     border-right: 0 !important;
 }
 
@@ -827,7 +829,7 @@ aside {
 }
 
 /* 상품 목록 */
-.itemlist_area {
+.shopping_area {
     width: 318px;
     height: 1700px;
     padding: 10px;
@@ -856,7 +858,8 @@ aside {
     color: #777;
 }
 
-.itemlist_left1, .itemlist_right1 {
+.itemlist_left1,
+.itemlist_right1 {
     display: inline-block;
     width: 28px;
     height: 28px;
@@ -913,7 +916,8 @@ aside {
     color: #777;
 }
 
-.itemlist_left2, .itemlist_right2 {
+.itemlist_left2,
+.itemlist_right2 {
     display: inline-block;
     width: 28px;
     height: 28px;
@@ -935,7 +939,7 @@ aside {
 /* 쇼핑뉴스 */
 .shoppingnews_wrap {
     width: 100%;
-    height: 250px;
+    height: fit-content;
     border-bottom: 1px solid #ddd;
     margin-top: 15px;
 }
@@ -966,4 +970,72 @@ aside {
 
 .shoppingnews_page span:nth-child(2) {
     color: #777;
+}
+
+.shoppingnews_list_area {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.shoppingnews_list li {
+  padding: 9px 0;
+  font-size: 12px;
+}
+
+.shoppingnews_list li a span:first-child {
+  position: relative;
+  margin-left: 20px;
+}
+
+.shoppingnews_list li a span:first-child::before {
+  position: absolute;
+  display: block;
+  content: "";
+  top: 6px;
+  width: 1px;
+  height: 1px;
+  border: 2px solid #00aa44;
+  border-radius: 50%;
+}
+
+.shoppingnews_list li a span:nth-child(2) {
+  margin-left: 15px;
+}
+
+.shoppingnews_list li a:hover {
+  text-decoration: underline;
+}
+
+.shopping_simple_area {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.shopping_sub_wrap span {
+  font-size: 14px;
+}
+
+.shopping_sub_wrap span + span {
+  margin-left: 5px;
+}
+
+.focused {
+  border-bottom: 2px solid #00aa44;
+  color: #00aa44;
+  font-weight: bold;
+}
+
+.shopping_sub_page {
+  display: inline-block;
+  margin-left: 12px;
+}
+
+.shopping_sub_page span {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.shopping_sub_page span:nth-child(2) {
+  margin-left: 0;
+  color: #777;
 }
