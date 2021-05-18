@@ -124,6 +124,7 @@ nav {
 
 .greentext {
     color: #00bb00;
+    font-weight: bold;
 }
 
 .weather_nav {
@@ -1054,6 +1055,10 @@ aside {
   margin-top: 10px;
 }
 
+.simple_list_item:hover p {
+  text-decoration: underline;
+}
+
 .simple_list_item img {
   width: 154px;
   height: 154px;
@@ -1072,4 +1077,85 @@ aside {
   height: 500px;
   background: #eee;
   border-top: 2px solid #ddd;
+}
+
+.footer_banner_wrap {
+  width: 1190px;
+  height: 126px;
+  margin: 30px auto 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.footer_banner_list li a img {
+  float: left;
+  width: 180px;
+  height: 96px;
+}
+
+.footer_banner_list li + li a img {
+  margin-left: 70px;
+}
+
+.footer_banner_info {
+  float: left;
+  text-align: left;
+  margin-left: 15px;
+}
+
+.footer_banner_info p:first-child {
+  padding: 5px 0;
+  font-size: 13px;
+}
+
+.footer_banner_info p:nth-child(2) {
+  padding: 5px 0;
+  font-size: 14px;
+}
+
+.footer_banner_info p:last-child {
+  line-height: 20px;
+  font-size: 13px;
+  padding: 5px 0;
+}
+
+.notice {
+  width: 1190px;
+  height: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.notice > a > span:hover {
+  text-decoration: underline;
+}
+
+.notice a:first-child span {
+  float: left;
+  font-size: 12px;
+  margin-right: 10px;
+}
+
+.notice a:nth-child(2) span {
+  float: left;
+  color: #777;
+  font-size: 12px;
+}
+
+.allservice {
+  float: right;
+}
+
+.allservice:hover span:first-child {
+  text-decoration: underline;
+}
+
+.allservice span:first-child {
+  font-size: 12px;
+}
+
+.allservice span:nth-child(2) {
+  font-size: 16px;
+  color: #555;
 }
