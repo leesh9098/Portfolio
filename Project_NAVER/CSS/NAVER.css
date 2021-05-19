@@ -123,6 +123,10 @@ nav {
     margin-left: 15px;
 }
 
+.nav_wrap a:nth-child(17) nav:hover {
+  text-decoration: underline;
+}
+
 .greentext {
     color: #00bb00;
     font-weight: bold;
@@ -179,8 +183,11 @@ section {
 }
 
 .issue_area a:first-child span {
-    font-weight: bold;
     margin-left: 15px;
+}
+
+.issue_area a:nth-child(3) span:hover {
+  text-decoration: underline;
 }
 
 .direct_area {
@@ -352,12 +359,16 @@ section {
     margin-left: 10px;
 }
 
-.right_area>a>span {
+.right_area a span {
     float: right;
     font-size: 14px;
     font-weight: bold;
     color: #444;
     margin-left: 5px;
+}
+
+.right_area a span:hover {
+  text-decoration: underline;
 }
 
 .right_area span:nth-child(2) {
@@ -888,6 +899,10 @@ aside {
 .item_wrap {
     width: 102px;
     margin-bottom: 10px;
+}
+
+.item_wrap:hover p {
+  text-decoration: underline;
 }
 
 .item_wrap img {
