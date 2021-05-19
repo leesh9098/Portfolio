@@ -1087,6 +1087,10 @@ aside {
   border-bottom: 1px solid #ddd;
 }
 
+.footer_banner_list li a:hover .footer_banner_info p:nth-child(2) {
+  text-decoration: underline;
+}
+
 .footer_banner_list li a img {
   float: left;
   width: 180px;
@@ -1100,7 +1104,7 @@ aside {
 .footer_banner_info {
   float: left;
   text-align: left;
-  margin-left: 15px;
+  padding-left: 15px;
 }
 
 .footer_banner_info p:first-child {
