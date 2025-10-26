@@ -10,12 +10,12 @@ export function Hero() {
       <div className="container mx-auto max-w-4xl text-center">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
           <motion.p
-            className="text-primary text-sm md:text-base mb-4 font-mono"
+            className="text-primary text-base md:text-lg mb-4 font-mono"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
           >
-            안녕하세요
+            안녕하세요. 방문해주셔서 감사합니다.
           </motion.p>
 
           <motion.h1
@@ -24,27 +24,17 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
           >
-            Alex Johnson
+            이성훈 Sunghoon Lee
           </motion.h1>
 
           <motion.h2
-            className="text-2xl md:text-4xl lg:text-5xl font-bold text-muted-foreground mb-6 text-balance"
+            className="text-2xl md:text-4xl lg:text-5xl font-bold text-muted-foreground mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
           >
-            I build exceptional digital experiences
+            최고를 향해 나아가는<br />웹 프론트엔드 개발자입니다.
           </motion.h2>
-
-          <motion.p
-            className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed text-pretty"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
-          >
-            I'm a frontend developer specializing in building beautiful, accessible, and performant web applications.
-            Currently focused on creating innovative solutions with modern technologies.
-          </motion.p>
 
           <motion.div
             className="flex flex-col sm:flex-row gap-4 justify-center"

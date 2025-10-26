@@ -2,21 +2,24 @@
 
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
-import { Github, Linkedin, Mail, Menu, X } from "lucide-react"
+import { Github, Mail, Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { Notion } from "@/components/icons"
+import { Tistory } from "@/components/icons"
 
 const navItems = [
   { name: "About", href: "#about" },
   { name: "Skills", href: "#skills" },
-  { name: "Projects", href: "#projects" },
   { name: "Experience", href: "#experience" },
+  { name: "Projects", href: "#projects" },
   { name: "Contact", href: "#contact" },
 ]
 
 const socialLinks = [
-  { icon: Github, href: "https://github.com", label: "GitHub" },
-  { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-  { icon: Mail, href: "mailto:hello@example.com", label: "Email" },
+  { icon: Github, href: "https://github.com/leesh9098", label: "GitHub" },
+  { icon: Mail, href: "mailto:leesh9098@naver.com", label: "Email" },
+  { icon: Notion, href: "https://www.notion.so/17e25874c03680e89780cac8f7b050dc?source=copy_link", label: "Notion" },
+  { icon: Tistory, href: "https://atrix-developer.tistory.com", label: "Tistory" },
 ]
 
 export function Navigation() {

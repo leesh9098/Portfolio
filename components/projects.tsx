@@ -9,38 +9,22 @@ import { ExternalLink, Github } from "lucide-react"
 
 const projects = [
   {
-    title: "E-Commerce Platform",
-    description:
-      "A full-featured e-commerce platform with cart functionality, payment integration, and admin dashboard.",
-    image: "/modern-ecommerce-website.png",
-    tags: ["Next.js", "TypeScript", "Stripe", "Tailwind"],
-    github: "https://github.com",
-    demo: "https://example.com",
+    title: "Carog (2025.06 ~ 2025.09)",
+    description: "차량 유지 비용을 관리하는 웹 애플리케이션",
+    members: "Frontend: 2명, Backend: 1명",
+    image: "/sample_carog.png",
+    tags: ["React", "vite", "TypeScript", "Tailwind", "Shadcn/UI"],
+    github: "https://github.com/leesh9098/Carog",
+    demo: "https://carog.vercel.app",
   },
   {
-    title: "Task Management App",
-    description: "Collaborative task management application with real-time updates and team features.",
-    image: "/task-management-dashboard.png",
-    tags: ["React", "Node.js", "Socket.io", "MongoDB"],
-    github: "https://github.com",
-    demo: "https://example.com",
-  },
-  {
-    title: "Portfolio Generator",
-    description: "SaaS platform that helps developers create beautiful portfolios with customizable templates.",
-    image: "/portfolio-website-builder.png",
-    tags: ["Vue.js", "Express", "PostgreSQL", "AWS"],
-    github: "https://github.com",
-    demo: "https://example.com",
-  },
-  {
-    title: "Weather Dashboard",
-    description: "Real-time weather dashboard with forecasts, maps, and location-based alerts.",
-    image: "/weather-dashboard-interface.png",
-    tags: ["React", "TypeScript", "API Integration", "Charts"],
-    github: "https://github.com",
-    demo: "https://example.com",
-  },
+    title: "PlanVerse (2024.12 ~ 2025.05)",
+    description: "업무 및 프로젝트를 효율적으로 관리하기 위한 웹 애플리케이션",
+    members: "Frontend: 2명, Backend: 1명",
+    image: "/no-image.jpg",
+    tags: ["Next.js", "TypeScript", "Tailwind", "Shadcn/UI"],
+    github: "https://gitlab.com/planverse/ui/planverse-ui"
+  }
 ]
 
 export function Projects() {
@@ -55,7 +39,7 @@ export function Projects() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Featured Projects</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">사이드 프로젝트</h2>
 
           <div className="grid md:grid-cols-2 gap-6">
             {projects.map((project, index) => (
@@ -77,8 +61,8 @@ export function Projects() {
 
                   <div className="p-6">
                     <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                    <p className="text-muted-foreground mb-4 leading-relaxed">{project.description}</p>
-
+                    <p className="text-muted-foreground leading-relaxed">{project.description}</p>
+                    <p className="text-muted-foreground mb-4 leading-relaxed">{project.members}</p>
                     <div className="flex flex-wrap gap-2 mb-4">
                       {project.tags.map((tag) => (
                         <span key={tag} className="px-2 py-1 bg-secondary text-secondary-foreground rounded text-xs">
@@ -94,12 +78,14 @@ export function Projects() {
                           Code
                         </a>
                       </Button>
-                      <Button size="sm" asChild>
-                        <a href={project.demo} target="_blank" rel="noopener noreferrer">
-                          <ExternalLink className="w-4 h-4 mr-2" />
-                          Demo
-                        </a>
-                      </Button>
+                      {project.demo && (
+                        <Button size="sm" asChild>
+                          <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                            <ExternalLink className="w-4 h-4 mr-2" />
+                            Demo
+                          </a>
+                        </Button>
+                      )}
                     </div>
                   </div>
                 </Card>

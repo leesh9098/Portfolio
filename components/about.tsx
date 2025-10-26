@@ -18,9 +18,9 @@ export function About() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">About Me</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">소개</h2>
 
-          <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div className="grid md:grid-cols-1 gap-8 items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
@@ -49,22 +49,6 @@ export function About() {
                   에 기록하여 다른 개발자에게 도움이 될 수 있도록 지식을 공유하고 있습니다.
                 </p>
               </Card>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="relative"
-            >
-              <div className="aspect-square rounded-lg overflow-hidden border-2 border-primary/20 relative group">
-                <div className="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors duration-300" />
-                <img
-                  src="/professional-developer-portrait.png"
-                  alt="Profile"
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
-                />
-              </div>
             </motion.div>
           </div>
         </motion.div>

@@ -8,15 +8,15 @@ import { Card } from "@/components/ui/card"
 const skillCategories = [
   {
     title: "Frontend",
-    skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Vue.js"],
+    skills: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
   },
   {
     title: "Backend",
-    skills: ["Node.js", "Express", "PostgreSQL", "MongoDB", "REST APIs", "GraphQL"],
+    skills: ["Node.js", "Express", "MySQL"],
   },
   {
     title: "Tools & Others",
-    skills: ["Git", "Docker", "Figma", "Webpack", "Jest", "CI/CD"],
+    skills: ["Git", "Docker", "AWS", "Firebase"],
   },
 ]
 
@@ -32,7 +32,7 @@ export function Skills() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Skills & Technologies</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">기술 스택</h2>
 
           <div className="grid md:grid-cols-3 gap-6">
             {skillCategories.map((category, categoryIndex) => (
