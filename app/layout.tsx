@@ -7,10 +7,10 @@ export const metadata: Metadata = {
   title: '이성훈',
   description: '웹 프론트엔드 개발자',
   verification: {
-    google: "i9-ZXlkBrmJZQVkbmKPb0IXgKopWUf15xr_7nYLS9gU",
+    google: "9ntG751XLoNKTLA6V_UaAha1i6CmkVetfQhjZGOY4AM",
   },
   other: {
-    "naver-site-verification": "e665925c00d389b22ce7c36058e13717e5ed1322"
+    "naver-site-verification": "793270ec6d77e1db6c89460a17b8b0c2ad302322"
   }
 }
 
