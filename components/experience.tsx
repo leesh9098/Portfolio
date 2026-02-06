@@ -4,21 +4,26 @@ import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useRef } from "react"
 import { Card } from "@/components/ui/card"
+import { Badge } from "./ui/badge"
+import { Button } from "./ui/button"
+import Link from "next/link"
+import { LinkIcon } from "lucide-react"
 
 const companies = [
   {
-    name: "블루프로그",
+    name: "(주)블루프로그",
     position: "웹 프론트엔드",
-    period: "2021.07 ~"
+    period: "2021.07 ~ 2026.02"
   }
 ]
 
 const experiences = [
   {
-    company: "블루프로그",
+    company: "(주)블루프로그",
     projects: [
       {
         title: "trepick",
+        serviceLink: "https://trepick.com",
         period: "2021.12 ~",
         description: "온라인 행사 제작 및 운영 플랫폼",
         skills: ["Next.js", "TypeScript", "Styled-components"],
@@ -32,6 +37,7 @@ const experiences = [
       },
       {
         title: "소속비즈니스",
+        serviceLink: "https://biz.sosok.so",
         period: "2022.12 ~",
         description: "매장 관리 및 이용량 관리 플랫폼",
         skills: ["Next.js", "TypeScript", "Tailwind", "Shadcn/UI"],
@@ -45,6 +51,8 @@ const experiences = [
       },
       {
         title: "소속",
+        landingLink: "https://sosok.so",
+        serviceLink: "https://app.sosok.so",
         period: "2025.02 ~",
         description: "오프라인 할인 멤버십 플랫폼",
         skills: ["React-Native", "Next.js", "TypeScript", "Tailwind", "Shadcn/UI"],
@@ -71,14 +79,16 @@ export function Experience() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section id="experience" className="py-20 lg:py-32 px-4 bg-secondary/30" ref={ref}>
-      <div className="container mx-auto max-w-4xl">
+    <section id="experience" className="py-20 lg:py-32 px-4 bg-slate-800/30" ref={ref}>
+      <div className="mx-auto max-w-4xl">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">경력</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
+            Experience
+          </h2>
 
           {companies.map((company, index) => (
             <motion.div
@@ -105,19 +115,46 @@ export function Experience() {
                         transition={{ duration: 0.6, delay: index * 0.2 }}
                       >
                         <Card className="p-6 bg-card border-border hover:border-primary/50 transition-colors duration-300">
-                          <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                          <div className="flex flex-col md:flex-row md:items-center md:justify-between">
                             <h3 className="text-primary text-xl font-bold">{project.title}</h3>
                             <span className="text-sm text-muted-foreground mt-2 md:mt-0">{project.period}</span>
                           </div>
-        
-                          <p className="text-muted-foreground mb-4 leading-relaxed">{project.description}</p>
 
-                          <div className="flex flex-wrap gap-2 mb-4">
-                            {project.skills.map((skill, i) => (
-                              <span key={i} className="px-2 py-1 bg-secondary text-secondary-foreground rounded text-xs">
-                                {skill}
-                              </span>
-                            ))}
+                          <p className="text-muted-foreground leading-relaxed">{project.description}</p>
+
+                          <div className="flex flex-wrap gap-x-2">
+                            {project.landingLink && (
+                              <Button
+                                variant="secondary"
+                                className="w-fit"
+                                asChild
+                              >
+                                <Link
+                                  href={project.landingLink}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  <LinkIcon size={16} />
+                                  Landing Page
+                                </Link>
+                              </Button>
+                            )}
+                            {project.serviceLink && (
+                              <Button
+                                variant="secondary"
+                                className="w-fit"
+                                asChild
+                              >
+                                <Link
+                                  href={project.serviceLink}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  <LinkIcon size={16} />
+                                  Service Page
+                                </Link>
+                              </Button>
+                            )}
                           </div>
         
                           {project.achievements.length > 0 && (
@@ -136,6 +173,14 @@ export function Experience() {
                               ))}
                             </ul>
                           )}
+
+                          <div className="flex flex-wrap gap-2">
+                            {project.skills.map((skill, i) => (
+                              <span key={i} className="px-2 py-1 bg-slate-800 text-secondary-foreground rounded text-xs">
+                                {skill}
+                              </span>
+                            ))}
+                          </div>
                         </Card>
                       </motion.div>
                     ))}

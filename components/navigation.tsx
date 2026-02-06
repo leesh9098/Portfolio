@@ -6,6 +6,7 @@ import { Github, Mail, Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Notion } from "@/components/icons"
 import { Tistory } from "@/components/icons"
+import Link from "next/link"
 
 const navItems = [
   { name: "About", href: "#about" },
@@ -43,16 +44,16 @@ export function Navigation() {
         isScrolled ? "bg-background/80 backdrop-blur-lg border-b border-border" : ""
       }`}
     >
-      <div className="container mx-auto px-4 lg:px-8">
+      <div className="mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
-          <motion.a
-            href="#"
-            className="text-xl font-bold text-foreground"
+          <motion.button
+            className="text-xl font-bold text-foreground cursor-pointer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
             Lee's Portfolio
-          </motion.a>
+          </motion.button>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
@@ -60,7 +61,7 @@ export function Navigation() {
               <motion.a
                 key={item.name}
                 href={item.href}
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                className="text-sm text-neutral-300 hover:text-foreground transition-colors"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
@@ -85,6 +86,7 @@ export function Navigation() {
                 transition={{ delay: 0.5 + index * 0.1 }}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
+                aria-label={social.label}
               >
                 <social.icon className="w-5 h-5" />
               </motion.a>
@@ -112,18 +114,18 @@ export function Navigation() {
           >
             <div className="flex flex-col gap-4">
               {navItems.map((item) => (
-                <a
+                <Link
                   key={item.name}
                   href={item.href}
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}
               <div className="flex gap-4 pt-4 border-t border-border">
                 {socialLinks.map((social) => (
-                  <a
+                  <Link
                     key={social.label}
                     href={social.href}
                     target="_blank"
@@ -131,7 +133,7 @@ export function Navigation() {
                     className="text-muted-foreground hover:text-foreground transition-colors"
                   >
                     <social.icon className="w-5 h-5" />
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>

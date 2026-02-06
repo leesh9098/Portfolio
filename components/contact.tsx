@@ -12,14 +12,14 @@ export function Contact() {
 
   return (
     <section id="contact" className="py-20 lg:py-32 px-4" ref={ref}>
-      <div className="container mx-auto max-w-6xl">
+      <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
-            Contact Me
+            Contact
           </h2>
           <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
             저에 대해 궁금하신 점이 있다면 연락주세요. 언제나 기다리고 있습니다
@@ -33,7 +33,7 @@ export function Contact() {
           >
             <Link href="mailto:leesh9098@naver.com">
               <Button className="w-48">
-                Send Message
+                Send Email
               </Button>
             </Link>
           </motion.div>
@@ -46,7 +46,7 @@ export function Contact() {
         animate={isInView ? { opacity: 1 } : { opacity: 0 }}
         transition={{ duration: 0.6, delay: 0.6 }}
       >
-        <p className="text-sm">© 2025 Sunghoon Lee. Built with Next.js and Framer Motion.</p>
+        <p className="text-sm">copyright © {new Date().getFullYear()} Sunghoon Lee. All rights reserved.</p>
       </motion.footer>
     </section>
   )

@@ -3,11 +3,12 @@
 import { motion } from "framer-motion"
 import { ArrowDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 export function Hero() {
   return (
     <section className="min-h-screen flex items-center justify-center relative px-4">
-      <div className="container mx-auto max-w-4xl text-center">
+      <div className="max-w-4xl mx-auto text-center">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
           <motion.p
             className="text-primary text-base md:text-lg mb-4 font-mono"
@@ -28,12 +29,12 @@ export function Hero() {
           </motion.h1>
 
           <motion.h2
-            className="text-2xl md:text-4xl lg:text-5xl font-bold text-muted-foreground mb-6"
+            className="leading-14 text-2xl md:text-4xl lg:text-5xl font-bold text-muted-foreground mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
           >
-            최고를 향해 나아가는<br />웹 프론트엔드 개발자입니다.
+            귀찮은 것을 싫어하며 효율을 추구하는<br />5년차 웹 프론트엔드 개발자입니다.
           </motion.h2>
 
           <motion.div
@@ -42,17 +43,43 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
           >
-            <Button size="lg" asChild>
-              <a href="#projects">View My Work</a>
+            <Button
+              size="lg"
+              variant="secondary"
+              className="hover:bg-primary hover:text-primary-foreground"
+              asChild
+            >
+              <Link href="#projects">Work</Link>
             </Button>
-            <Button size="lg" variant="outline" asChild>
-              <a href="#contact">Get In Touch</a>
+            <Button
+              size="lg"
+              variant="secondary"
+              className="hover:bg-primary hover:text-primary-foreground"
+              asChild
+            >
+              <Link href="#contact">Contact</Link>
+            </Button>
+            <Button
+              size="lg"
+              variant="secondary"
+              className="hover:bg-primary hover:text-primary-foreground"
+              asChild
+            >
+              <Link
+                href="/이성훈_이력서.pdf"
+                download="이성훈_이력서.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Resume
+              </Link>
             </Button>
           </motion.div>
         </motion.div>
       </div>
 
       <motion.a
+        aria-label="Scroll down"
         href="#about"
         className="absolute bottom-8 left-1/2 -translate-x-1/2"
         initial={{ opacity: 0, y: -20 }}
