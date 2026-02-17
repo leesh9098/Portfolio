@@ -29,12 +29,12 @@ export function Hero() {
           </motion.h1>
 
           <motion.h2
-            className="leading-14 text-2xl md:text-4xl lg:text-5xl font-bold text-muted-foreground mb-6"
+            className="leading-8 md:leading-14 text-xl md:text-4xl lg:text-5xl font-bold text-muted-foreground mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
           >
-            귀찮은 것을 싫어하며 효율을 추구하는<br />5년차 웹 프론트엔드 개발자입니다.
+            사용자 경험과 효율을 중요시하는<br />5년차 웹 프론트엔드 개발자입니다.
           </motion.h2>
 
           <motion.div

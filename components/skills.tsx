@@ -1,8 +1,6 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { useInView } from "framer-motion"
-import { useRef } from "react"
 import { Card } from "@/components/ui/card"
 import Image from "next/image"
 
@@ -12,19 +10,19 @@ const skillCategories = [
     skills: [
       {
         name: "React",
-        src: "/react.png"
+        src: "/react.webp"
       },
       {
         name: "Next.js",
-        src: "/nextjs.png"
+        src: "/nextjs.webp"
       },
       {
         name: "TypeScript",
-        src: "/typescript.png"
+        src: "/typescript.webp"
       },
       {
         name: "Tailwind CSS",
-        src: "/tailwindcss.png"
+        src: "/tailwindcss.webp"
       }
     ],
   },
@@ -33,11 +31,11 @@ const skillCategories = [
     skills: [
       {
         name: "Node.js",
-        src: "/nodejs.png"
+        src: "/nodejs.webp"
       },
       {
         name: "MySQL",
-        src: "/mysql.png"
+        src: "/mysql.webp"
       }
     ]
   },
@@ -46,30 +44,33 @@ const skillCategories = [
     skills: [
       {
         name: "Git",
-        src: "/git.png"
+        src: "/git.webp"
       },
       {
         name: "Docker",
-        src: "/docker.png"
+        src: "/docker.webp"
       },
       {
         name: "AWS",
-        src: "/aws.png"
+        src: "/aws.webp"
       },
       {
         name: "Firebase",
-        src: "/firebase.png"
+        src: "/firebase.webp"
       }
     ]
   }
 ]
 
-export function Skills() {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
-
+export function Skills({
+  ref,
+  isInView
+}: {
+  ref: React.RefObject<HTMLDivElement | null>
+  isInView: boolean
+}) {
   return (
-    <section id="skills" className="py-20 lg:py-32 px-4 bg-slate-800/30" ref={ref}>
+    <section id="skills" className="py-20 lg:py-32 px-4" ref={ref}>
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}

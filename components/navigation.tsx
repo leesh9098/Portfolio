@@ -7,12 +7,12 @@ import { Button } from "@/components/ui/button"
 import { Notion } from "@/components/icons"
 import { Tistory } from "@/components/icons"
 import Link from "next/link"
+import { cn } from "@/lib/utils"
 
 const navItems = [
-  { name: "About", href: "#about" },
-  { name: "Skills", href: "#skills" },
+  { name: "About & Skills", href: "#about" },
   { name: "Experience", href: "#experience" },
-  { name: "Projects", href: "#projects" },
+  { name: "Side Projects", href: "#side-projects" },
   { name: "Contact", href: "#contact" },
 ]
 
@@ -23,7 +23,7 @@ const socialLinks = [
   { icon: Tistory, href: "https://atrix-developer.tistory.com", label: "Tistory" },
 ]
 
-export function Navigation() {
+export function Navigation({ activeSection }: { activeSection: string }) {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
@@ -56,12 +56,15 @@ export function Navigation() {
           </motion.button>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-8 h-full">
             {navItems.map((item, index) => (
               <motion.a
                 key={item.name}
                 href={item.href}
-                className="text-sm text-neutral-300 hover:text-foreground transition-colors"
+                className={cn(
+                  "text-sm text-neutral-300 hover:text-foreground transition-colors",
+                  activeSection === item.name && "text-white font-bold border-b-2 border-white"
+                )}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}

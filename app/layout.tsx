@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "이성훈 포트폴리오",
     description: "웹 프론트엔드 개발자",
-    images: "/no-image.jpg",
+    images: "/thumbnail.webp",
     url: "https://www.leesh9098.site",
     siteName: "이성훈 포트폴리오"
   }
