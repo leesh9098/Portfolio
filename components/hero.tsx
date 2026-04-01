@@ -66,8 +66,8 @@ export function Hero() {
               asChild
             >
               <Link
-                href="/이성훈_이력서.pdf"
-                download="이성훈_이력서.pdf"
+                href="/이성훈 이력서.pdf"
+                download="이성훈 이력서.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
               >
