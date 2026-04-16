@@ -27,7 +27,7 @@ const experiences = [
         description: "온라인 행사 제작 및 운영 플랫폼",
         skills: ["Next.js", "TypeScript", "Styled-components"],
         achievements: [
-          "유저 참여형 이벤트 페이지 제작"
+          "Google Analytics + Google Tag Manager 연동으로 유저 행동 데이터 수집 및 마케팅 성과 분석 지원"
         ],
       },
       {
@@ -85,7 +85,7 @@ export function Experience({
             Experience
           </h2>
 
-          {companies.map((company, index) => (
+          {companies.map((company) => (
             <motion.div
               key={company.name}
               initial={{ opacity: 0, x: -50 }}
@@ -97,105 +97,108 @@ export function Experience({
                   <h3 className="text-2xl md:text-3xl font-bold">{company.name}</h3>
                   <p className="text-sm md:text-base text-muted-foreground mt-2">{company.period}</p>
                 </div>
-                {experiences.filter(experience => experience.company === company.name).map((experience, index) => (
-                  <div
-                    key={experience.company}
-                    className="space-y-6"
-                  >
-                    {experience.projects.map((project, index) => (
-                      <motion.div
-                        key={project.title}
-                        initial={{ opacity: 0, x: -50 }}
-                        animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
-                        transition={{ duration: 0.6, delay: index * 0.2 }}
-                      >
-                        <Card className="flex-col-reverse md:flex-row p-0 md:p-6 bg-card border-border group hover:border-primary/50 transition-all duration-300">
-                          <div className="flex flex-col gap-6 md:flex-1 p-4 md:p-0">
-                            <div>
-                              <h3 className="text-primary text-xl font-bold">{project.title}</h3>
-                              <p className="text-sm text-muted-foreground mt-2">{project.period}</p>
-                            </div>
-                            <p className="w-fit text-muted-foreground leading-relaxed">{project.description}</p>
-                            {(project.landingLink || project.serviceLink) && (
-                              <div className="flex flex-wrap gap-x-2">
-                                {project.landingLink && (
-                                  <Button
-                                    variant="secondary"
-                                    className="w-fit"
-                                    asChild
-                                  >
-                                    <Link
-                                      href={project.landingLink}
-                                      target="_blank"
-                                      rel="noopener noreferrer"
-                                    >
-                                      <LinkIcon size={16} />
-                                      Landing Page
-                                    </Link>
-                                  </Button>
-                                )}
-                                {project.serviceLink && (
-                                  <Button
-                                    variant="secondary"
-                                    className="w-fit"
-                                    asChild
-                                  >
-                                    <Link
-                                      href={project.serviceLink}
-                                      target="_blank"
-                                      rel="noopener noreferrer"
-                                    >
-                                      <LinkIcon size={16} />
-                                      Service Page
-                                    </Link>
-                                  </Button>
-                                )}
+                {experiences
+                  .filter(experience => experience.company === company.name)
+                  .map((experience) => (
+                    <div
+                      key={experience.company}
+                      className="space-y-6"
+                    >
+                      {experience.projects.map((project, index) => (
+                        <motion.div
+                          key={project.title}
+                          initial={{ opacity: 0, x: -50 }}
+                          animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+                          transition={{ duration: 0.6, delay: index * 0.2 }}
+                        >
+                          <Card className="flex-col-reverse md:flex-row p-0 md:p-6 bg-card border-border group hover:border-primary/50 transition-all duration-300">
+                            <div className="flex flex-col gap-6 md:flex-1 p-4 md:p-0">
+                              <div>
+                                <h3 className="text-primary text-xl md:text-2xl font-bold">{project.title}</h3>
+                                <p className="text-sm text-muted-foreground mt-2">{project.period}</p>
                               </div>
-                            )}
-          
-                            {project.achievements.length > 0 && (
-                              <ul className="space-y-2">
-                                {project.achievements.map((achievement, i) => (
-                                  <motion.li
-                                    key={i}
-                                    className="text-sm text-muted-foreground flex items-start"
-                                    initial={{ opacity: 0, x: -20 }}
-                                    animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-                                    transition={{ duration: 0.4, delay: index * 0.2 + i * 0.1 }}
-                                  >
-                                    <span className="text-primary mr-2">▹</span>
-                                    {achievement}
-                                  </motion.li>
+                              <p className="w-fit text-muted-foreground leading-relaxed">{project.description}</p>
+                              {(project.landingLink || project.serviceLink) && (
+                                <div className="flex flex-wrap gap-x-2">
+                                  {project.landingLink && (
+                                    <Button
+                                      variant="secondary"
+                                      className="w-fit"
+                                      asChild
+                                    >
+                                      <Link
+                                        href={project.landingLink}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                      >
+                                        <LinkIcon size={16} />
+                                        Landing Page
+                                      </Link>
+                                    </Button>
+                                  )}
+                                  {project.serviceLink && (
+                                    <Button
+                                      variant="secondary"
+                                      className="w-fit"
+                                      asChild
+                                    >
+                                      <Link
+                                        href={project.serviceLink}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                      >
+                                        <LinkIcon size={16} />
+                                        Service Page
+                                      </Link>
+                                    </Button>
+                                  )}
+                                </div>
+                              )}
+            
+                              {project.achievements.length > 0 && (
+                                <ul className="space-y-2">
+                                  {project.achievements.map((achievement, i) => (
+                                    <motion.li
+                                      key={i}
+                                      className="flex items-start"
+                                      initial={{ opacity: 0, x: -20 }}
+                                      animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+                                      transition={{ duration: 0.4, delay: index * 0.2 + i * 0.1 }}
+                                    >
+                                      <span className="text-primary mr-2">▹</span>
+                                      {achievement}
+                                    </motion.li>
+                                  ))}
+                                </ul>
+                              )}
+
+                              <div className="flex flex-wrap gap-2">
+                                {project.skills.map((skill, i) => (
+                                  <span key={i} className="px-2 py-1 bg-slate-800 text-secondary-foreground rounded text-xs">
+                                    {skill}
+                                  </span>
                                 ))}
-                              </ul>
-                            )}
-
-                            <div className="flex flex-wrap gap-2">
-                              {project.skills.map((skill, i) => (
-                                <span key={i} className="px-2 py-1 bg-slate-800 text-secondary-foreground rounded text-xs">
-                                  {skill}
-                                </span>
-                              ))}
+                              </div>
                             </div>
-                          </div>
 
-                          <div className="md:flex-1 relative overflow-hidden aspect-video">
-                            <Image
-                              src={project.image}
-                              alt={project.title}
-                              width={0}
-                              height={0}
-                              sizes="100vw"
-                              className="w-full size-full aspect-square object-top object-cover group-hover:scale-110 transition-transform duration-300"
-                              priority
-                            />
-                            <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                          </div>
-                        </Card>
-                      </motion.div>
-                    ))}
-                  </div>
-                ))}
+                            <div className="md:flex-1 relative overflow-hidden aspect-video">
+                              <Image
+                                src={project.image}
+                                alt={project.title}
+                                width={0}
+                                height={0}
+                                sizes="100vw"
+                                className="w-full size-full aspect-square object-top object-cover group-hover:scale-110 transition-transform duration-300"
+                                priority
+                              />
+                              <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                            </div>
+                          </Card>
+                        </motion.div>
+                      ))}
+                    </div>
+                  ))
+                }
               </Card>
             </motion.div>
           ))}

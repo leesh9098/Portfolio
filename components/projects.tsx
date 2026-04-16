@@ -9,7 +9,18 @@ import Image from "next/image"
 
 const projects = [
   {
-    title: "Carog (2025.06 ~ 2025.09)",
+    title: "그리움 이음",
+    period: "2025.11 ~ 진행 중",
+    description: "온라인 추모 및 가족 그룹 관리 서비스",
+    members: "Frontend: 2명, Backend: 1명",
+    position: "Lead Frontend Developer",
+    image: "/sample_geulium_ieum.webp",
+    tags: ["React Router (Remix)", "TypeScript", "Tailwind", "Shadcn/UI"],
+    github: "https://github.com/geulium-ieum/vite-geulium-ieum"
+  },
+  {
+    title: "Carog",
+    period: "2025.06 ~ 2025.09",
     description: "차량 유지 비용을 관리하는 웹 애플리케이션",
     members: "Frontend: 2명, Backend: 1명",
     position: "Lead Frontend Developer",
@@ -19,8 +30,9 @@ const projects = [
     demo: "https://carog.vercel.app",
   },
   {
-    title: "PlanVerse (2024.12 ~ 2025.05)",
-    description: "업무 및 프로젝트의 효율적인 관리를 위한 웹 애플리케이션",
+    title: "PlanVerse",
+    period: "2024.12 ~ 2025.05",
+    description: "업무 ⋅ 프로젝트의 효율적인 관리를 위한 웹 애플리케이션",
     members: "Frontend: 2명, Backend: 1명",
     position: "Lead Frontend Developer",
     image: "/sample_planverse.webp",
@@ -55,7 +67,7 @@ export function Projects({
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
                 <Card className="md:flex-row-reverse gap-0 h-full py-0 overflow-hidden bg-card border-border group hover:border-primary/50 transition-all duration-300">
-                  <div className="w-1/2 h-120 relative overflow-hidden">
+                  <div className="w-full md:w-1/2 aspect-square md:aspect-auto md:h-120 relative overflow-hidden">
                     <Image
                       src={project.image || "/placeholder.svg"}
                       alt={project.title}
@@ -67,20 +79,26 @@ export function Projects({
                     <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
 
-                  <div className="flex flex-col justify-center w-1/2 h-full p-6">
-                    <h3 className="text-xl md:text-2xl font-bold mb-2">{project.title}</h3>
-                    <p className="md:text-lg text-muted-foreground font-semibold leading-relaxed mb-4">{project.description}</p>
-                    <ul className="mb-4">
-                      <li>
-                        <span className="text-primary mr-2">▹</span>
-                        <span className="text-muted-foreground leading-relaxed">{project.members}</span>
-                      </li>
-                      <li>
-                        <span className="text-primary mr-2">▹</span>
-                        <span className="text-muted-foreground leading-relaxed">{project.position}</span>
-                      </li>
-                    </ul>
-                    <div className="flex flex-wrap gap-2 mb-4">
+                  <div className="flex flex-col gap-6 justify-center w-full md:w-1/2 md:h-full p-6">
+                    <div>
+                      <h3 className="text-primary text-xl md:text-2xl font-bold">{project.title}</h3>
+                      <p className="text-sm text-muted-foreground mt-2">{project.period}</p>
+                    </div>
+                    <p className="text-muted-foreground md:text-lg leading-relaxed">{project.description}</p>
+                    <div>
+                      <p className="font-semibold">인원 및 역할</p>
+                      <ul className="">
+                        <li className="leading-7">
+                          <span className="text-primary mr-2">▹</span>
+                          <span className="leading-relaxed">{project.members}</span>
+                        </li>
+                        <li className="leading-7">
+                          <span className="text-primary mr-2">▹</span>
+                          <span className="leading-relaxed">{project.position}</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="flex flex-wrap gap-2">
                       {project.tags.map((tag) => (
                         <span key={tag} className="px-2 py-1 bg-slate-800 text-secondary-foreground rounded text-xs">
                           {tag}

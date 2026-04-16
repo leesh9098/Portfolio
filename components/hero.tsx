@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ArrowDown } from "lucide-react"
+import { ArrowDown, FileDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 
@@ -20,21 +20,21 @@ export function Hero() {
           </motion.p>
 
           <motion.h1
-            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 text-balance"
+            className="text-4xl md:text-5xl leading-16 font-bold mb-4 text-balance"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
           >
-            이성훈 Sunghoon Lee
+            프론트엔드 개발자<br />이성훈입니다.
           </motion.h1>
 
           <motion.h2
-            className="leading-8 md:leading-14 text-xl md:text-4xl lg:text-5xl font-bold text-muted-foreground mb-6"
+            className="text-xl md:text-[36px] font-bold text-muted-foreground mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
           >
-            사용자 경험과 효율을 중요시하는<br />5년차 웹 프론트엔드 개발자입니다.
+            사용자 경험과 효율을 중요시합니다.
           </motion.h2>
 
           <motion.div
@@ -45,24 +45,7 @@ export function Hero() {
           >
             <Button
               size="lg"
-              variant="secondary"
-              className="hover:bg-primary hover:text-primary-foreground"
-              asChild
-            >
-              <Link href="#projects">Work</Link>
-            </Button>
-            <Button
-              size="lg"
-              variant="secondary"
-              className="hover:bg-primary hover:text-primary-foreground"
-              asChild
-            >
-              <Link href="#contact">Contact</Link>
-            </Button>
-            <Button
-              size="lg"
-              variant="secondary"
-              className="hover:bg-primary hover:text-primary-foreground"
+              className="font-bold"
               asChild
             >
               <Link
@@ -71,6 +54,7 @@ export function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
+                <FileDown />
                 Resume
               </Link>
             </Button>
