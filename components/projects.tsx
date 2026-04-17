@@ -53,7 +53,7 @@ export function Projects({
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Side Projects</h2>
@@ -63,7 +63,7 @@ export function Projects({
               <motion.div
                 key={project.title}
                 initial={{ opacity: 0, y: 50 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
                 <Card className="md:flex-row-reverse gap-0 h-full py-0 overflow-hidden bg-card border-border group hover:border-primary/50 transition-all duration-300">

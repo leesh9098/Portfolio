@@ -74,7 +74,7 @@ export function Skills({
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
@@ -86,7 +86,7 @@ export function Skills({
               <motion.div
                 key={category.title}
                 initial={{ opacity: 0, y: 50 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: categoryIndex * 0.2 }}
               >
                 <Card className="p-6 bg-card border-border h-full hover:border-primary/50 transition-colors duration-300">
@@ -96,8 +96,8 @@ export function Skills({
                       <motion.div
                         key={skill.name}
                         className="flex items-center gap-x-2 px-3 py-1 bg-slate-800 text-secondary-foreground rounded-full text-sm"
-                        initial={{ opacity: 0, scale: 0 }}
-                        animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0 }}
+                        initial={{ opacity: 1, scale: 1 }}
+                        animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.3, delay: categoryIndex * 0.2 + skillIndex * 0.1 }}
                         whileHover={{ scale: 1.1 }}
                       >

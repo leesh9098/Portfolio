@@ -78,7 +78,7 @@ export function Experience({
       <div className="w-full mx-auto max-w-4xl">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
@@ -89,7 +89,7 @@ export function Experience({
             <motion.div
               key={company.name}
               initial={{ opacity: 0, x: -50 }}
-              animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <Card className="p-4 md:p-6 bg-card border-border hover:border-primary/50 transition-colors duration-300">
@@ -108,7 +108,7 @@ export function Experience({
                         <motion.div
                           key={project.title}
                           initial={{ opacity: 0, x: -50 }}
-                          animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+                          animate={{ opacity: 1, x: 0 }}
                           transition={{ duration: 0.6, delay: index * 0.2 }}
                         >
                           <Card className="flex-col-reverse md:flex-row p-0 md:p-6 bg-card border-border group hover:border-primary/50 transition-all duration-300">
@@ -162,7 +162,7 @@ export function Experience({
                                       key={i}
                                       className="flex items-start"
                                       initial={{ opacity: 0, x: -20 }}
-                                      animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+                                      animate={{ opacity: 1, x: 0 }}
                                       transition={{ duration: 0.4, delay: index * 0.2 + i * 0.1 }}
                                     >
                                       <span className="text-primary mr-2">▹</span>

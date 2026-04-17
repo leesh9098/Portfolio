@@ -17,7 +17,7 @@ export function Contact({
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
@@ -29,7 +29,7 @@ export function Contact({
 
             <motion.div
               initial={{ opacity: 0, x: 50 }}
-              animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               className="w-fit mx-auto"
             >
@@ -45,7 +45,7 @@ export function Contact({
       <motion.footer
         className="py-8 border-t border-border text-center text-muted-foreground"
         initial={{ opacity: 0 }}
-        animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+        animate={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.6 }}
       >
         <p className="text-sm">copyright © {new Date().getFullYear()} Sunghoon Lee. All rights reserved.</p>

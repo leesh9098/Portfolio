@@ -75,7 +75,7 @@ export function About({
       <div className="flex flex-col md:flex-row gap-8 mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="flex flex-col gap-y-12 w-full md:w-1/2"
         >
@@ -85,7 +85,7 @@ export function About({
 
           <motion.div
             initial={{ opacity: 0, x: -50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="flex-1"
           >
@@ -120,7 +120,7 @@ export function About({
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="flex flex-col gap-y-12 w-full md:w-1/2"
         >
@@ -133,7 +133,7 @@ export function About({
               <motion.div
                 key={category.title}
                 initial={{ opacity: 0, y: 50 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: categoryIndex * 0.2 }}
               >
                 <Card className="p-6 bg-card border-border hover:border-primary/50 transition-colors duration-300">
@@ -144,7 +144,7 @@ export function About({
                         key={skill.name}
                         className="flex items-center gap-x-2 w-fit px-3 py-1 bg-slate-800 text-secondary-foreground rounded-full text-sm"
                         initial={{ opacity: 0, scale: 0 }}
-                        animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0 }}
+                        animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.3, delay: categoryIndex * 0.2 + skillIndex * 0.1 }}
                         whileHover={{ scale: 1.1 }}
                       >
