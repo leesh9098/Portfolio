@@ -23,7 +23,7 @@ const projects = [
     period: "2025.06 ~ 2025.09",
     description: "차량 유지 비용을 관리하는 웹 애플리케이션",
     members: "Frontend: 2명, Backend: 1명",
-    position: "Lead Frontend Developer",
+    position: "PM, Lead Frontend Developer",
     image: "/sample_carog_video.gif",
     tags: ["React", "vite", "TypeScript", "Tailwind", "Shadcn/UI"],
     github: "https://github.com/leesh9098/Carog",
