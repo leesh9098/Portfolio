@@ -27,6 +27,9 @@ const experiences = [
         description: "온라인 행사 제작 및 운영 플랫폼",
         skills: ["Next.js", "TypeScript", "Styled-components"],
         achievements: [
+          "이미지(jpg, png → webp) 및 동영상(mp4 → webm) 리소스 최적화로 용량 각각 30%, 20% 감소",
+          "Lighthouse 성능·접근성·SEO·Best Practices 전 항목 100점 달성",
+          "Next.js SSR을 활용한 동적 Open Graph 적용으로 SNS 공유 유입 최적화",
           "Google Analytics + Google Tag Manager 연동으로 유저 행동 데이터 수집 및 마케팅 성과 분석 지원"
         ],
       },
@@ -38,7 +41,14 @@ const experiences = [
         description: "매장 관리 및 이용량 관리 플랫폼",
         skills: ["Next.js", "TypeScript", "Tailwind", "Shadcn/UI"],
         achievements: [
-          "데이터 시각화 및 대시보드/차트 구현"
+          "TanStack Query 도입으로 불필요한 API 호출 약 40% 감소 및 UX 개선",
+          "NextAuth 소셜 로그인 및 Firebase Auth 로그인 기능 구현",
+          "Firebase Cloud Messaging을 사용한 푸시 알림 기능 구현",
+          "토스페이먼츠 결제 모듈 연동",
+          "Sentry 도입으로 오류 발생 원인 추적 및 이슈 대응 시간 1일 이내로 단축",
+          "Web Socket을 활용한 실시간 채팅 기능 구현",
+          "chart.js를 사용한 사용량 데이터 시각화 대시보드 구현",
+          "AWS ECS + ECR 배포 환경 구축"
         ],
       },
       {
@@ -50,18 +60,13 @@ const experiences = [
         description: "오프라인 할인 멤버십 플랫폼",
         skills: ["React-Native", "Next.js", "TypeScript", "Tailwind", "Shadcn/UI"],
         achievements: [
-          "Flutter → React-Native + WebView 마이그레이션"
+          "Flutter → React Native + WebView 마이그레이션으로 앱 용량 25% 감소",
+          "웹 배포 방식 전환으로 앱 업데이트 소요 시간 2~3일 → 약 5분으로 단축",
+          "Virtualized 도입으로 렌더링 시간 약 80% 이상, API 서버 부하 약 90% 이상 감소",
+          "Branch.io를 활용한 동적 딥링크 기능 구현 (Firebase Dynamic Links 대체)",
+          "기기 카메라를 활용한 QR 코드 스캔 기능 구현"
         ],
       },
-      // {
-      //   title: "소속인사이트",
-      //   period: "2023.09 ~",
-      //   description: "서비스 이용량 데이터 시각화 및 대시보드",
-      //   skills: ["AWS", "Python", "MySQL", "Docker"],
-      //   achievements: [
-      //     "Apache Superset 구축",
-      //   ],
-      // }
     ]
   }
 ]
